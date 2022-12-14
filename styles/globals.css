@@ -19,12 +19,27 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+button {
+  background: linear-gradient(94.28deg, #32C7E8 -54.93%, #2F6CE6 51.88%);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: linear-gradient(94.28deg, #32C7E8 -54.93%, #2F6CE6 51.88%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+button:focus {
+  background: linear-gradient(94.28deg, #32C7E8 -54.93%, #2F6CE6 51.88%);
+}
+
+button:active {
+  background: linear-gradient(0deg, rgba(5, 17, 56, 0.2), rgba(5, 17, 56, 0.2)),
+    linear-gradient(94.28deg, #32C7E8 -54.93%, #2F6CE6 51.88%);
+}
+
+button:disabled {
+  background: linear-gradient(94.28deg, #32C7E8 -54.93%, #2F6CE6 51.88%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32));
 }
