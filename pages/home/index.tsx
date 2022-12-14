@@ -1,13 +1,13 @@
 import Footer from "../../components/footer"
-import Cards from "../../components/home/cards"
-import Faq from "../../components/home/faq"
-import HeadSection from "../../components/home/headSection"
+import HowItWorks from "../../components/home/HowItWorks"
+import Faq from "../../components/home/Faq"
+import HeadSection from "../../components/home/HeadSection"
 
 const Home = () => {
     return (
         <>
             <HeadSection />
-            <Cards />
+            <HowItWorks />
             <Faq />
             <Footer />
         </>

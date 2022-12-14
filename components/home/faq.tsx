@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const plus = '/assets/img/svg/plus.svg';
@@ -48,8 +49,8 @@ const Faq = () => {
                     askQuestion.map((item: any, idx: number) => (
                         <div className='border-b-2 border-grey-50' key={idx}>
                             <div className='flex justify-between w-100 my-6'>
-                                <h3 className='text-lg text-grey-900 font-bold'>{item.title}</h3>
-                                <img src={idx === active ? minus : plus} alt='btn' className='cursor-pointer' onClick={() => setActive(idx === active ? -1 : idx)} />
+                                <h3 className='md:text-lg sm: text-md text-grey-900 font-bold'>{item.title}</h3>
+                                <Image src={idx === active ? minus : plus} alt='btn' className='cursor-pointer' width={16} height={16} onClick={() => setActive(idx === active ? -1 : idx)} />
                             </div>
                             {
                                 idx === active ?

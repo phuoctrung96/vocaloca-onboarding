@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 const step1 = '/assets/img/svg/step1.svg';
 const step2 = '/assets/img/svg/step2.svg';
 const step3 = '/assets/img/svg/step3.svg';
 const step4 = '/assets/img/svg/step4.svg';
 
-const Cards = () => {
+const HowItWorks = () => {
     const steps = [
         {
             img: step1,
@@ -39,7 +41,7 @@ const Cards = () => {
                         steps.map((item: any, idx: number) => (
                             <div key={idx} className='w-100 bg-white/10 px-6 py-12 rounded-lg flex items-center flex-col'>
                                 <div className='rounded-full bg-dark-blue p-4 mb-8'>
-                                    <img src={item.img} alt='step' />
+                                    <Image src={item.img} alt='step' width={32} height={32} />
                                 </div>
                                 <div className='text-center'>
                                     <p className='text-xm text-white/60'>{`STEP ${idx + 1}`}</p>
@@ -55,4 +57,4 @@ const Cards = () => {
     )
 }
 
-export default Cards;
+export default HowItWorks;
