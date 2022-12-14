@@ -9,7 +9,7 @@
             "sentence-case"
         ],
         "type-enum": [
-            2,
+            1,
             "always",
             [
                 "build",
