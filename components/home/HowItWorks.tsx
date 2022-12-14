@@ -41,7 +41,7 @@ const HowItWorks = () => {
                         steps.map((item: any, idx: number) => (
                             <div key={idx} className='w-100 bg-white/10 px-6 py-12 rounded-lg flex items-center flex-col'>
                                 <div className='rounded-full bg-dark-blue p-4 mb-8'>
-                                    <Image src={item.img} alt='step' width={32} height={32} />
+                                    <Image src={item.img} alt='step' className="w-8 h-8" width={32} height={32} />
                                 </div>
                                 <div className='text-center'>
                                     <p className='text-xm text-white/60'>{`STEP ${idx + 1}`}</p>
