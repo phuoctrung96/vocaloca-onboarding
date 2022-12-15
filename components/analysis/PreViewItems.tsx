@@ -200,7 +200,7 @@ const PreViewItems = () => {
                 <span onClick={() => setList([...list, ...data])} className='cursor-pointer md:text-md text-base font-semibold bg-clip-text text-transparent bg-gradient-to-r from-gradient-end to-gradient-via'>Show more</span>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default PreViewItems;
