@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
@@ -38,9 +38,13 @@ module.exports = {
         'green-100': '#E2EFEE',
         'gradient-via': '#36A3ED',
         'gradient-end': '#2D6BE0',
+        'modal-from': '#3182E6',
+        'modal-via': '#37A3ED',
+        'card-bg': '#ffffff0f'
       },
       backgroundImage: {
-        'header-bg': "url('/assets/img/bg.png')",
+        'home-head': "url('/assets/img/bg/bg.png')",
+        'analysis-head': "url('/assets/img/bg/bg-light.png')"
       },
       fontSize: {
         xs: ['10px', '12px'],
@@ -53,9 +57,9 @@ module.exports = {
         '2xl': ['32px', '40px'],
         '3xl': ['36px', '44px'],
         '4xl': ['48px', '60px'],
-        '5xl': ['64px', '72px'],
+        '5xl': ['64px', '72px']
       }
-    },
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};
