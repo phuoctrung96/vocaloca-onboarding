@@ -1,9 +1,15 @@
+import { useState } from "react";
 import Image from "next/image";
+import DetailModal from "./modals/DetailModal";
+import TermsOfServiceModal from "./modals/TermsOfServiceModal";
+import AnalyzingModal from "./modals/AnalyzingModal";
 
 const step1 = '/assets/img/svg/step1.svg';
 const step2 = '/assets/img/svg/step2.svg';
 const step3 = '/assets/img/svg/step3.svg';
 const step4 = '/assets/img/svg/step4.svg';
+
+
 
 const HowItWorks = () => {
     const steps = [
@@ -29,31 +35,40 @@ const HowItWorks = () => {
         },
     ]
 
+    const [openModal, setOpenModal] = useState<Number>(0);
+
     return (
-        <div className='bg-dark-blue'>
-            <div className='container mx-auto py-8 px-4'>
-                <div className='text-center mt-16'>
-                    <h3 className='text-3xl text-white text-bold mb-4'>How it works</h3>
-                    <p className='text-md text-white/75'>We get it done in 4 simple steps</p>
-                </div>
-                <div className='py-16 grid grid-row-3 md:grid-flow-col sm:grid-flow-row gap-8'>
-                    {
-                        steps.map((item: any, idx: number) => (
-                            <div key={idx} className='w-100 bg-white/10 px-6 py-12 rounded-lg flex items-center flex-col'>
-                                <div className='rounded-full bg-dark-blue p-4 mb-8'>
-                                    <Image src={item.img} alt='step' className="w-8 h-8" width={32} height={32} />
+        <>
+            <div className='bg-dark-blue'>
+                <div className='container mx-auto py-8 px-4'>
+                    <div className='text-center mt-16'>
+                        <h3 className='text-3xl text-white text-bold mb-4'>How it works</h3>
+                        <p className='text-md text-white/75'>We get it done in 4 simple steps</p>
+                    </div>
+                    <div className='py-16 grid grid-row-3 md:grid-flow-col sm:grid-flow-row gap-8'>
+                        {
+                            steps.map((item: any, idx: number) => (
+                                <div key={idx} className='w-100 bg-white/10 px-6 py-12 rounded-lg flex md:items-center item-start flex-col'>
+                                    <div className="inline-flex">
+                                        <div className='rounded-full bg-dark-blue p-4 mb-8' onClick={() => setOpenModal(idx + 1)}>
+                                            <Image src={item.img} alt="step" className="w-8 h-8" width={32} height={32} />
+                                        </div>
+                                    </div>
+                                    <div className='md:text-center'>
+                                        <p className='text-xm text-white/60'>{`STEP ${idx + 1}`}</p>
+                                        <h5 className='text-md text-white text-bold my-3'>{item.title}</h5>
+                                        <p className='text-base text-white/75'>{item.description}</p>
+                                    </div>
                                 </div>
-                                <div className='text-center'>
-                                    <p className='text-xm text-white/60'>{`STEP ${idx + 1}`}</p>
-                                    <h5 className='text-md text-white text-bold my-3'>{item.title}</h5>
-                                    <p className='text-base text-white/75'>{item.description}</p>
-                                </div>
-                            </div>
-                        ))
-                    }
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
+            <DetailModal openModal={openModal === 1} setOpenModal={setOpenModal} />
+            <TermsOfServiceModal openModal={openModal === 2} setOpenModal={setOpenModal} />
+            <AnalyzingModal openModal={openModal === 3} setOpenModal={setOpenModal} />
+        </>
     )
 }
 

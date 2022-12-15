@@ -1,4 +1,5 @@
 import Header from "../header";
+import Link from "next/link";
 
 const HeadSection = () => {
     return (
@@ -10,7 +11,9 @@ const HeadSection = () => {
                         Localize. Grow. <span className='bg-clip-text text-transparent bg-gradient-to-r from-gradient-via to-gradient-end'>Earn.</span>
                     </h1>
                     <p className='md:text-md text-base text-gray-800'>Expand the reach of your content using our unique AI technology</p>
-                    <button className='text-md text-white px-[55px] py-[14px] my-[64px] max-[450px]:w-full'>Analyze</button>
+                    <Link href='preview'>
+                        <button className='text-md text-white px-[55px] py-[14px] my-[64px] max-[450px]:w-full'>Analyze</button>
+                    </Link>
                 </div>
             </div>
         </div>

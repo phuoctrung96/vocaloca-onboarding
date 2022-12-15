@@ -38,6 +38,8 @@ module.exports = {
         'green-100': '#E2EFEE',
         'gradient-via': '#36A3ED',
         'gradient-end': '#2D6BE0',
+        'modal-from': "#3182E6",
+        'modal-via': "#37A3ED"
       },
       backgroundImage: {
         'header-bg': "url('/assets/img/bg.png')",

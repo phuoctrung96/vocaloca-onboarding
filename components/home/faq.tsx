@@ -48,7 +48,7 @@ const Faq = () => {
                 {
                     askQuestion.map((item: any, idx: number) => (
                         <div className='border-b-2 border-grey-50' key={idx}>
-                            <div className='flex justify-between w-100 my-6'>
+                            <div className='flex justify-between items-center w-100 my-6'>
                                 <h3 className='md:text-lg sm: text-md text-grey-900 font-bold'>{item.title}</h3>
                                 <Image src={idx === active ? minus : plus} alt='btn' className='cursor-pointer w-4 h-4' width={16} height={16} onClick={() => setActive(idx === active ? -1 : idx)} />
                             </div>
