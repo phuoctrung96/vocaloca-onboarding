@@ -6,8 +6,30 @@ const termFill = '/assets/img/svg/term-fill.svg';
 const checkActive = '/assets/img/svg/check-active.svg';
 const checkDisable = '/assets/img/svg/check-disable.svg';
 
+type Values = {
+  check: boolean,
+  click: boolean
+}
+
 const AnalyzingModal = ({ openModal, setOpenModal }: any) => {
-  const [check, setCheck] = useState<boolean>(false);
+
+  const [values, setValues] = useState<Values>({
+    check: false,
+    click: false
+  });
+
+  const handle = (key: string, value: boolean) => {
+    setValues({ ...values, [key]: value });
+  }
+
+  const nextSetp = () => {
+    if (values.check) {
+      setOpenModal(3)
+    } else {
+      handle('click', true)
+    }
+  }
+
   return (
     <Modal open={openModal} onClose={() => setOpenModal(0)}>
       <div className="mt-3 text-center">
@@ -81,8 +103,8 @@ const AnalyzingModal = ({ openModal, setOpenModal }: any) => {
       </div>
       <div className="flex mt-6">
         <Image
-          src={check ? checkActive : checkDisable}
-          onClick={() => setCheck(!check)}
+          src={values.check ? checkActive : checkDisable}
+          onClick={() => handle('check', !values.check)}
           alt="step"
           className="cursor-pointer w-5 h-5 mr-2"
           width={20}
@@ -92,9 +114,13 @@ const AnalyzingModal = ({ openModal, setOpenModal }: any) => {
           I agree to the terms and conditions
         </p>
       </div>
+      {
+        values.click && !values.check &&
+        <p className='text-sm text-red-500 text-start mt-1 pl-2'>You must agree our terms and conditions.</p>
+      }
       <div className="items-center pt-4">
         <button
-          onClick={() => setOpenModal(3)}
+          onClick={() => nextSetp()}
           className="px-4 py-3 text-white text-base rounded-md w-full"
         >
           Analyze
