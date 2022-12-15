@@ -20,6 +20,11 @@ a {
   font-family: 'Inter', sans-serif !important;
 }
 
+.modal {
+  background: linear-gradient(180deg, rgba(49, 130, 230, 0.25) 0%, rgba(55, 163, 237, 0.25) 9.9%, rgba(255, 255, 255, 0.25) 46.88%), #FFFFFF;
+  box-shadow: -4px -16px 32px rgba(20, 18, 30, 0.04), 4px 16px 32px rgba(20, 18, 30, 0.08);
+}
+
 .term::-webkit-scrollbar {
   height: 4px;
   width: 4px;
