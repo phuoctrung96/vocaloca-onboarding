@@ -39,10 +39,12 @@ module.exports = {
         'gradient-via': '#36A3ED',
         'gradient-end': '#2D6BE0',
         'modal-from': "#3182E6",
-        'modal-via': "#37A3ED"
+        'modal-via': "#37A3ED",
+        'card-bg': "#ffffff0f"
       },
       backgroundImage: {
-        'header-bg': "url('/assets/img/bg.png')",
+        'home-head': "url('/assets/img/bg/bg.png')",
+        'analysis-head': "url('/assets/img/bg/bg-light.png')",
       },
       fontSize: {
         xs: ['10px', '12px'],

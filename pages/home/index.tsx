@@ -1,6 +1,6 @@
 import Footer from "../../components/footer"
 import HowItWorks from "../../components/home/HowItWorks"
-import Faq from "../../components/home/Faq"
+import FAQs from "../../components/home/FAQs"
 import HeadSection from "../../components/home/HeadSection"
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
         <>
             <HeadSection />
             <HowItWorks />
-            <Faq />
+            <FAQs />
             <Footer />
         </>
     )

@@ -173,7 +173,7 @@ const PreViewItems = () => {
     ]
     return (
         <div className='container mx-auto px-4'>
-            <div className="flex items-center pb-7 border-b-2 border-grey-50">
+            <div className="flex items-center md:pb-7 pb-4 border-b-2 border-grey-50">
                 <Image src={user1} alt="user" height={56} width={56} className="h-14 w-14 rounded-full mr-4" />
                 <div>
                     <div className="flex items-center">
@@ -183,10 +183,10 @@ const PreViewItems = () => {
                     <p className="text-gray-800 text-sm">1,613,552 subscribers</p>
                 </div>
             </div>
-            <div className="grid md:grid-cols-3 sm:grid-row-3 gap-5 py-6">
+            <div className="grid md:grid-cols-3 sm:grid-row-3 gap-5 md:py-6 py-4">
                 {
                     data.map((item, idx) => (
-                        <div className="w-100 pb-5" key={idx}>
+                        <div className="w-100 md:pb-5 pb:3" key={idx}>
                             <Image src={item.img} width={10} height={10} className="w-full" sizes="(max-width: 768px) 100%, (max-width: 1200px) 100%" alt="content" />
                             <div className="flex items-center justify-between py-2 mt-2 border-b-2 border-grey-50">
                                 <div className="flex">

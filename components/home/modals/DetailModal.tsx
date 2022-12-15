@@ -29,7 +29,7 @@ const DetailModal = ({ openModal, setOpenModal }: any) => {
                     <input type="text" placeholder="YouTube channel URL" name="url" className="border-[1px] border-grey-50 rounded-md w-full px-4 py-3 my-2 text-base" />
                 </div>
                 <div className="items-center pt-4">
-                    <button className="px-4 py-3 text-white text-base rounded-md w-full">
+                    <button onClick={() => setOpenModal(2)} className="px-4 py-3 text-white text-base rounded-md w-full">
                         Analyze
                     </button>
                 </div>
