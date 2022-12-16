@@ -3,8 +3,6 @@ import Image from 'next/image';
 import Modal from '../../Modal';
 
 const termFill = '/assets/img/svg/term-fill.svg';
-const checkActive = '/assets/img/svg/check-active.svg';
-const checkDisable = '/assets/img/svg/check-disable.svg';
 
 type Values = {
   check: boolean,
@@ -101,15 +99,8 @@ const AnalyzingModal = ({ openModal, setOpenModal }: any) => {
           </div>
         </div>
       </div>
-      <div className="flex mt-6">
-        <Image
-          src={values.check ? checkActive : checkDisable}
-          onClick={() => handle('check', !values.check)}
-          alt="step"
-          className="cursor-pointer w-5 h-5 mr-2"
-          width={20}
-          height={20}
-        />
+      <div className="flex mt-6 items-center">
+        <input type="checkbox" onChange={(e: React.ChangeEvent<HTMLInputElement>) => handle('check', e.target.checked)} className='w-4 h-4 mr-2' />
         <p className="text-sm text-grey-900 font-medium">
           I agree to the terms and conditions
         </p>
